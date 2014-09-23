@@ -22,7 +22,6 @@
 		58B103941856D48F006EE948 /* FlippingSwitchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B103931856D48F006EE948 /* FlippingSwitchesTests.m */; };
 		58B103A01856D955006EE948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B1039E1856D955006EE948 /* Images.xcassets */; };
 		58B103A11856D955006EE948 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58B1039F1856D955006EE948 /* Settings.bundle */; };
-		9F4A799419CC6802004F21C4 /* NRDSwitchCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */; };
 		9F65C75C19D1DA690081F24F /* UISwitch+NRDForcedAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65C75B19D1DA690081F24F /* UISwitch+NRDForcedAnimation.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,6 @@
 		58B103931856D48F006EE948 /* FlippingSwitchesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlippingSwitchesTests.m; sourceTree = "<group>"; };
 		58B1039E1856D955006EE948 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58B1039F1856D955006EE948 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		9F4A799219CC6802004F21C4 /* NRDSwitchCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDSwitchCalculator.h; sourceTree = "<group>"; };
-		9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDSwitchCalculator.m; sourceTree = "<group>"; };
 		9F65C75A19D1DA690081F24F /* UISwitch+NRDForcedAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+NRDForcedAnimation.h"; sourceTree = "<group>"; };
 		9F65C75B19D1DA690081F24F /* UISwitch+NRDForcedAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+NRDForcedAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +125,6 @@
 				58B103781856D48F006EE948 /* NRDAppDelegate.m */,
 				58B1037D1856D48F006EE948 /* NRDViewController.h */,
 				58B1037E1856D48F006EE948 /* NRDViewController.m */,
-				9F4A799219CC6802004F21C4 /* NRDSwitchCalculator.h */,
-				9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */,
 				58B1039D1856D955006EE948 /* Resources */,
 				58B1036F1856D48F006EE948 /* Supporting Files */,
 				9F65C75A19D1DA690081F24F /* UISwitch+NRDForcedAnimation.h */,
@@ -308,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4A799419CC6802004F21C4 /* NRDSwitchCalculator.m in Sources */,
 				58B1037F1856D48F006EE948 /* NRDViewController.m in Sources */,
 				9F65C75C19D1DA690081F24F /* UISwitch+NRDForcedAnimation.m in Sources */,
 				58B103751856D48F006EE948 /* main.m in Sources */,
