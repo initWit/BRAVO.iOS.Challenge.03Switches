@@ -8,6 +8,7 @@
 
 #import "NRDViewController.h"
 #import "NRDSwitchCalculator.h"
+#import "UISwitch+NRDForcedAnimation.h"
 
 @interface NRDViewController ()
 @property (nonatomic, strong) IBOutletCollection(UISwitch) NSArray *childSwitches;
@@ -43,8 +44,9 @@
 {
     int masterSwitchValue = self.masterSwitch.on;
     
-    // set child switches to the value of the master switch
-    [self setChildSwitchesToMasterSwitchValue:masterSwitchValue];
+    // send all the child switches to be animated
+    NSNumber *masterSwitchValueObject = [NSNumber numberWithBool:self.masterSwitch.on];
+    [self.childSwitches makeObjectsPerformSelector:@selector(animateSwitchBasedOnValue:) withObject:masterSwitchValueObject];
     
     // calculate the value of the switch counter based on the master switch
     [self.calculator resetSwitchCounterToMasterSwitchValue:masterSwitchValue];
@@ -53,7 +55,7 @@
 
 #pragma mark Helper Calculation Methods
 
-- (void) setMasterSwitchValue
+- (void)setMasterSwitchValue
 {
     // if all switches are on, set master switch to on; else set master switch to off
     if ([self.calculator areAllSwitchesOn]) {
@@ -63,11 +65,5 @@
     }
 }
 
-
--(void) setChildSwitchesToMasterSwitchValue:(int)masterSwitchValue
-{
-    // set the child switches to the value of the master switch
-    [self.childSwitches setValue:[NSNumber numberWithInt:masterSwitchValue] forKey:@"on"];
-}
 
 @end
