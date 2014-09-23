@@ -42,11 +42,13 @@
 
 - (IBAction)flippedMasterSwitch:(UISwitch *)masterSwitch
 {
-    NSInteger masterSwitchValue = self.masterSwitch.on;
+    
+    NSNumber *masterSwitchValueObject = [NSNumber numberWithBool:self.masterSwitch.on];
     
     // send all the child switches to be animated
-    NSNumber *masterSwitchValueObject = [NSNumber numberWithBool:self.masterSwitch.on];
     [self.childSwitches makeObjectsPerformSelector:@selector(animateSwitchBasedOnValue:) withObject:masterSwitchValueObject];
+    
+    NSInteger masterSwitchValue = self.masterSwitch.on;
     
     // calculate the value of the switch counter based on the master switch
     [self.calculator resetSwitchCounterToMasterSwitchValue:masterSwitchValue];
