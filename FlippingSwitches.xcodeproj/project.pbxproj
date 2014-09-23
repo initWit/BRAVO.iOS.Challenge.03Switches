@@ -22,6 +22,7 @@
 		58B103941856D48F006EE948 /* FlippingSwitchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B103931856D48F006EE948 /* FlippingSwitchesTests.m */; };
 		58B103A01856D955006EE948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B1039E1856D955006EE948 /* Images.xcassets */; };
 		58B103A11856D955006EE948 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58B1039F1856D955006EE948 /* Settings.bundle */; };
+		9F4A799419CC6802004F21C4 /* NRDSwitchCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		58B103931856D48F006EE948 /* FlippingSwitchesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlippingSwitchesTests.m; sourceTree = "<group>"; };
 		58B1039E1856D955006EE948 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58B1039F1856D955006EE948 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		9F4A799219CC6802004F21C4 /* NRDSwitchCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDSwitchCalculator.h; sourceTree = "<group>"; };
+		9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDSwitchCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				58B103781856D48F006EE948 /* NRDAppDelegate.m */,
 				58B1037D1856D48F006EE948 /* NRDViewController.h */,
 				58B1037E1856D48F006EE948 /* NRDViewController.m */,
+				9F4A799219CC6802004F21C4 /* NRDSwitchCalculator.h */,
+				9F4A799319CC6802004F21C4 /* NRDSwitchCalculator.m */,
 				58B1039D1856D955006EE948 /* Resources */,
 				58B1036F1856D48F006EE948 /* Supporting Files */,
 			);
@@ -213,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NRD;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ben Dolmar";
 				TargetAttributes = {
 					58B103851856D48F006EE948 = {
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4A799419CC6802004F21C4 /* NRDSwitchCalculator.m in Sources */,
 				58B1037F1856D48F006EE948 /* NRDViewController.m in Sources */,
 				58B103751856D48F006EE948 /* main.m in Sources */,
 				58B103791856D48F006EE948 /* NRDAppDelegate.m in Sources */,
@@ -354,7 +360,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -393,7 +398,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -431,6 +435,7 @@
 				GCC_PREFIX_HEADER = "FlippingSwitches/FlippingSwitches-Prefix.pch";
 				INFOPLIST_FILE = "FlippingSwitches/FlippingSwitches-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Weverything";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -444,6 +449,7 @@
 				GCC_PREFIX_HEADER = "FlippingSwitches/FlippingSwitches-Prefix.pch";
 				INFOPLIST_FILE = "FlippingSwitches/FlippingSwitches-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -451,7 +457,6 @@
 		58B1039B1856D48F006EE948 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlippingSwitches.app/FlippingSwitches";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -474,7 +479,6 @@
 		58B1039C1856D48F006EE948 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlippingSwitches.app/FlippingSwitches";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
