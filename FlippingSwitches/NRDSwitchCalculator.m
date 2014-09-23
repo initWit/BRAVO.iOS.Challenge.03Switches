@@ -9,12 +9,12 @@
 #import "NRDSwitchCalculator.h"
 
 @interface NRDSwitchCalculator ()
-
+@property (nonatomic, assign) NSInteger switchCounter;
 @end
 
 @implementation NRDSwitchCalculator
 
-- (id) init {
+- (id)init {
     self = [super init];
     if (self) {
         self.switchCounter = 0;
@@ -23,7 +23,7 @@
 }
 
 
-- (BOOL) areAllSwitchesOn
+- (BOOL)areAllSwitchesOn
 {
     if (self.switchCounter == self.totalNumberOfSwitches) {
         return YES;
@@ -32,7 +32,7 @@
 }
 
 
-- (void) calculateSwitchCountFromSwitchValue:(int)switchValue
+- (void)calculateSwitchCountFromSwitchValue:(NSInteger)switchValue
 {
     // add or subtract the switch value to the switch counter
     if (switchValue == 1) {
@@ -43,7 +43,7 @@
 }
 
 
-- (void) resetSwitchCounterToMasterSwitchValue:(int)masterSwitchValue
+- (void)resetSwitchCounterToMasterSwitchValue:(NSInteger)masterSwitchValue
 {
     // reset switch counter
     if (masterSwitchValue == 1) {

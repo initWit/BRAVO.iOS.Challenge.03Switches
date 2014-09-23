@@ -10,10 +10,9 @@
 
 @interface NRDSwitchCalculator : NSObject
 
-@property int switchCounter;
-@property int totalNumberOfSwitches;
+@property (nonatomic, assign) NSInteger totalNumberOfSwitches;
 
-- (void) calculateSwitchCountFromSwitchValue:(int)switchValue;
-- (BOOL) areAllSwitchesOn;
-- (void) resetSwitchCounterToMasterSwitchValue:(int)masterSwitchValue;
+-(void)calculateSwitchCountFromSwitchValue:(NSInteger)switchValue;
+-(BOOL)areAllSwitchesOn;
+-(void)resetSwitchCounterToMasterSwitchValue:(NSInteger)masterSwitchValue;
 @end

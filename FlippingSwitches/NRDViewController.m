@@ -30,7 +30,7 @@
 
 - (IBAction)flippedSwitch:(UISwitch *)childSwitch
 {
-    int childSwitchValue = childSwitch.on;
+    NSInteger childSwitchValue = childSwitch.on;
     
     // calculate how many switches are flipped
     [self.calculator calculateSwitchCountFromSwitchValue:childSwitchValue];
@@ -42,7 +42,7 @@
 
 - (IBAction)flippedMasterSwitch:(UISwitch *)masterSwitch
 {
-    int masterSwitchValue = self.masterSwitch.on;
+    NSInteger masterSwitchValue = self.masterSwitch.on;
     
     // send all the child switches to be animated
     NSNumber *masterSwitchValueObject = [NSNumber numberWithBool:self.masterSwitch.on];
